@@ -1,13 +1,21 @@
-"This is a temperature converter that takes input from a user and returns the value in degree celsuis"
-temp = input("Enter a current temperature measurement in fahrenheit or kelvin:")
-if temp.endswith('K'):
-    y = float(temp.replace("K", ""))
-    new_temp = y / 273.15
-    print(f'the temperature of {temp} is equivalent to {new_temp}C')
-elif temp.endswith('F'):
-    y = float(temp.replace("F", ""))
-    new_temp = y * (100/212)
-    print(f'the temperature of {temp} is equivalent to {new_temp}C')
-else:
-    print(f'the temperature of {temp} is equivalent to {temp}')
 
+def temperature_converter(num):
+    "This is a temperature converter function that takes input from a user and returns the value in degree celsuis"
+    
+    if num.endswith('K') or num.endswith('k'):
+        x = num.upper()
+        current_temp = float(x.replace("K", ""))
+        new_temp = current_temp / 273.15
+        return new_temp
+
+    elif num.endswith('F') or num.endswith('f'):
+        x = num.upper()
+        current_temp = float(x.replace("F", ""))
+        new_temp = current_temp * (100/212)
+        return new_temp
+    
+    return num
+
+
+temp = temperature_converter(input("Enter a current temperature measurement in fahrenheit or kelvin:"))
+print(f'the temperature entered is equivalent to {temp} Celsuis')
