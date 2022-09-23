@@ -5,13 +5,13 @@ def temperature_converter(num):
     if num.endswith('K') or num.endswith('k'):
         x = num.upper()
         current_temp = float(x.replace("K", ""))
-        new_temp = current_temp / 273.15
+        new_temp = current_temp - 273.15
         return new_temp
 
     elif num.endswith('F') or num.endswith('f'):
         x = num.upper()
         current_temp = float(x.replace("F", ""))
-        new_temp = current_temp * (100/212)
+        new_temp = (current_temp - 32) * 5/9
         return new_temp
     
     return num
