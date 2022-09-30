@@ -9,7 +9,6 @@ class Account:
         return f'Name:{self.name}\n\nBalance: {self.account_balance}\n\nDate: {date.today()}\n'
 
     def get_balance(self):
-        #print(f'{self.account_balance}')
         return f'current balance is {self.account_balance}'
 
     def deposit(self,num):
@@ -26,12 +25,17 @@ class Account:
         elif num > self.account_balance:
             return "Insufficient funds"
         
-    
-    def transfer(self,num):
+    """
+    def transfer(self,account_num2,num):
+        if account_num2:
+             x = self.account_balance + num
         return f'{self.name} transfer  is successful,remaining balance is {self.account_num}'
 
-
+"""
 y = Account("chidera","432222222",5000)
 x = Account('stella','55555555',6000)
 
-print(y.show_menu(),y.get_balance(),y.deposit(2000),y.withdraw(1000))
+#print(y.show_menu(),y.get_balance(),y.deposit(2000),y.withdraw(1000))
+print(y.transfer(x.account_num,3000))
+print(x.account_balance)
+print(y.account_balance)
