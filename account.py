@@ -4,19 +4,16 @@ class Account:
         self.name = name
         self.account_num = account_num
         self.account_balance = account_balance
-
+    
     def show_menu(self):
-        return f'Name:{self.name}\n\nBalance: {self.account_balance}\n\nDate: {date.today()}\n'
+        return f'Welcome {self.name}\n\nyour Current Balance is {self.account_balance}\n\nas of {date.today()}\n'
 
     def get_balance(self):
-        return f'current balance is {self.account_balance}'
+        return f'Current Balance is {self.account_balance}'
 
     def deposit(self,num):
-        if num:
-            total_balance = 0
-            x = num + self.account_balance
-            total_balance += x
-            return f'Deposit Successful and Current Balance is {total_balance}'
+        self.account_balance += num
+        return f'Deposit Successful and Current Balance is {self.account_balance}'
 
     def withdraw(self,num):
         if num < self.account_balance:
@@ -24,22 +21,23 @@ class Account:
             return f'Withdrawal Successful and Current Balance:{x}'
         elif num > self.account_balance:
             return "Insufficient funds"
-        
     
     def transfer(self,account,num):
-       x = self.withdraw(num)
-       account = self.deposit(num)
-       return True     
+        if self.account_balance > num:
+             self.account_balance -= num
+             account.account_balance += num
+             return f'Transfer Successfully made to {account.name} \nYour Available Balance is {self.account_balance}'
+        return f"Insufficient Funds"
 
-                 
+chidera = Account("chidera","432222222",5000)
+stella = Account('stella','55555555',6000)
 
+stella.transfer(chidera,3000)
+print(stella.get_balance())
 
-y = Account("chidera","432222222",5000)
-x = Account('stella','55555555',6000)
+chidera.deposit(1000)
+print(chidera.show_menu())
 
-print(y.show_menu(),y.get_balance(),y.deposit(2000),y.withdraw(1000))
-#print(x.account_balance)
-#print(y.account_balance)
-print(x.transfer(y.account_num,2000))
-print(x.get_balance())
-print(y.get_balance())
+print(chidera.withdraw(10000))
+print(chidera.transfer(stella,4000))
+print(chidera.deposit(10000))
