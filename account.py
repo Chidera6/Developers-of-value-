@@ -1,4 +1,7 @@
 from datetime import date
+"""
+This is a bank application system that shows menu,gets balance,withdraws and transfers
+"""
 class Account:
     def __init__(self,name, account_num,account_balance):
         self.name = name
@@ -31,13 +34,10 @@ class Account:
 
 chidera = Account("chidera","432222222",5000)
 stella = Account('stella','55555555',6000)
-
 stella.transfer(chidera,3000)
 print(stella.get_balance())
-
 chidera.deposit(1000)
 print(chidera.show_menu())
-
 print(chidera.withdraw(10000))
 print(chidera.transfer(stella,4000))
 print(chidera.deposit(10000))
