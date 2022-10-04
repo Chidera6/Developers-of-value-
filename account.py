@@ -34,10 +34,8 @@ class Account:
 
 chidera = Account("chidera","432222222",5000)
 stella = Account('stella','55555555',6000)
-stella.transfer(chidera,3000)
-print(stella.get_balance())
-chidera.deposit(1000)
+print(stella.transfer(chidera,3000))
+print(chidera.deposit(1000))
 print(chidera.show_menu())
 print(chidera.withdraw(10000))
 print(chidera.transfer(stella,4000))
-print(chidera.deposit(10000))
