@@ -1,0 +1,43 @@
+{
+    "chidera123":
+    {
+        "name":"Chidera Onumajuru",
+        "email":"xyz@bob.com",
+        "age":20,
+        "profession":"Backend developer"
+    },
+
+    "osi234":
+    {
+        "name":"osi Onumajuru",
+        "email":"xyz@bob.com",
+        "age":20,
+        "beautiful":true,
+        "profession":"frontend developer"
+    },
+
+    "chi555":
+    {
+        "name":"Chi Oke",
+        "email":"xyz@bob.com",
+        "age":20,
+        "profession":"Backend developer"
+    },
+    
+    "ngozi101":
+    {
+        "name":"ngozi Okezie",
+        "email":"xyz@bob.com",
+        "age":20,
+        "profession":"Python developer"
+    },
+    
+    "blessing555":
+    {
+        "name":"Blessing Okafor",
+        "email":"xyz@bob.com",
+        "age":20,
+        "profession":" UI/UX designer"
+    }
+    
+}
