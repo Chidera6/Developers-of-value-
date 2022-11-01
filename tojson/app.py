@@ -2,7 +2,6 @@ import json
 def fileread(filename):
     user = open(filename, "r")
     final_user = user.read()
-    print(final_user)
     convertjson = json.loads(final_user)
     x = {
         "name":"Bless Okafor",
@@ -11,8 +10,9 @@ def fileread(filename):
         "profession":" UI/UX designer"
     }
     convertjson["bles665"] = x
-    print(convertjson)
-    
+    user.close()
+    return f"The json format is\n\n {final_user}\n\n and when converted to Python is \n\n{convertjson}."
 
 
 x = fileread("info.json")
+print(x)
