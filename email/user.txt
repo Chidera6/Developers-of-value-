@@ -1,0 +1,6 @@
+{
+  "Stella_bank" : {
+    "username" : "chidera",
+    "user_email" : "lesaca7492@lance7.com",
+  }
+}
